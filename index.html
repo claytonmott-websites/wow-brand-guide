@@ -238,9 +238,13 @@ td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13.5p
 .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 @media (max-width:860px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.shots{grid-template-columns:1fr}}
-.shot{border-radius:24px;aspect-ratio:4/3;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-.shot svg{position:absolute;inset:0;width:100%;height:100%}
-.shot div{position:relative}
+.shot{margin:0;border-radius:24px;aspect-ratio:4/3;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:var(--wow-tar);color:#fff}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot::after{content:"";position:absolute;inset:38% 0 0;background:linear-gradient(to top,rgba(30,26,25,.9),rgba(30,26,25,0))}
+.shot figcaption{position:relative;z-index:1}
+.concept{position:absolute;top:14px;left:14px;z-index:1;font:700 11px/1 var(--text);letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.94);color:var(--wow-tar);padding:6px 9px;border-radius:12px 4px 12px 12px}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.wh .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 40%}
 .shot b{font:800 19px/1.1 var(--display);display:block;margin-bottom:6px}
 .shot span{font-size:14px;line-height:1.45;display:block;max-width:34ch}
 
@@ -720,14 +724,14 @@ figure{margin:0}
   <h3 class="sub-h">Photo frames &amp; characters</h3>
   <div class="el-row">
     <div class="grid g2">
-      <div class="photo-frame" style="background:#C58B63"><svg viewBox="0 0 200 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="250" fill="#E9A15F"/><rect y="150" width="200" height="100" fill="#8A5A3C"/><circle cx="150" cy="70" r="26" fill="#FFD774"/><rect x="18" y="110" width="120" height="70" rx="14" fill="#F6F3F1"/><rect x="28" y="120" width="44" height="26" rx="4" fill="#5B4A44"/></svg><span class="hash">#BeWOW</span></div>
-      <div class="photo-frame" style="background:var(--wow-blue);aspect-ratio:4/5"><svg viewBox="0 0 200 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="250" fill="#7FB3E8"/><circle cx="100" cy="120" r="40" fill="#6B4A3A"/><rect x="50" y="160" width="100" height="100" rx="40" fill="#F6F3F1"/></svg><span class="hash" style="background:var(--wow-tar)">#Siyabangena</span></div>
+      <div class="photo-frame"><img src="Images/web/WOW_Photo_WOW-Fuel-Forecourt.jpg" alt="WOW Fuel attendant and taxi owner at the pump" loading="lazy" style="object-position:30% 50%"><span class="hash">#BeWOW</span></div>
+      <div class="photo-frame"><img src="Images/web/WOW_Photo_Scholars-Palm-Scan.jpg" alt="Scholar scanning her palm to board a taxi" loading="lazy" style="object-position:62% 50%"><span class="hash" style="background:var(--wow-tar)">#Siyabangena</span></div>
     </div>
     <ul class="rules" style="align-content:center">
       <li>Photos sit in 24 px rounded frames on screen, or 6 mm in print. Never use circles or hard corners.</li>
       <li>The hashtag Tab docks into the bottom-left corner, flush with the frame.</li>
       <li><b>Character concepts</b> (the waving round “O” figures from the 2025 guide) are still in development. Use only approved master artwork, always in single-colour Red line style, and never alongside real people in the same frame.</li>
-      <li class="muted">The illustrations here are placeholders. Use real photography, following chapter 06.</li>
+      <li class="muted">Images shown are AI-generated concepts. See chapter 06 for photography rules.</li>
     </ul>
   </div>
 </section>
@@ -736,19 +740,19 @@ figure{margin:0}
 <section class="chapter" id="photo">
   <div class="ch-head">
     <div><span class="ch-num">06 — PHOTOGRAPHY</span><h2>Real ranks. Real people.</h2></div>
-    <p>Our photography shows the industry as it really is: proud, busy, sunlit and South African. People come first and vehicles second. The 2025 guide’s stock images of international teenagers don’t represent WOW and should be retired.</p>
+    <p>Our photography shows the industry as it really is: proud, busy, sunlit and South African. People come first and vehicles second. The 2025 guide’s stock images of international teenagers don’t represent WOW and should be retired. The references below are AI-generated concepts. Use them to brief photographers, and replace them with commissioned shoots for public work.</p>
   </div>
   <div class="shots">
-    <div class="shot bg-ox"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#5A1A1C" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The owner at golden hour</b><span>Driver or owner beside their Quantum, phone in hand, warm low sun. Shot from a confident low angle.</span></div></div>
-    <div class="shot bg-yellow"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#F5B400" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Fuel at the forecourt</b><span>A WOW tag at the pump in Komani. Show the attendant and the driver together.</span></div></div>
-    <div class="shot bg-green"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#199A5D" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Paying without cash</b><span>A commuter taps, scans a QR code or dials USSD on a basic phone. Show the hands and a smile, not a screen close-up.</span></div></div>
-    <div class="shot bg-blue"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#2A4FCC" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The agent at the rank</b><span>A WOW Agent in branded kit, signing up a driver or selling a SIM. Show a real conversation.</span></div></div>
-    <div class="shot bg-pink"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#E04689" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Scholars boarding</b><span>Learners boarding in uniform with a palm scan at the door. Faces only with signed parental consent.</span></div></div>
-    <div class="shot bg-tar"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#2E2826" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The spaza owner</b><span>A merchant behind the counter with a WOW card machine, stock on the shelves and a customer paying.</span></div></div>
+    <figure class="shot"><img src="Images/web/WOW_Photo_Owner-Golden-Hour.jpg" alt="Taxi owner in a WOW jacket leaning on his minibus taxi at sunset, holding a phone" loading="lazy"><span class="concept">Concept</span><figcaption><b>The owner at golden hour</b><span>Driver or owner beside their taxi, phone in hand, warm low sun. Shot from a confident low angle.</span></figcaption></figure>
+    <figure class="shot"><img src="Images/web/WOW_Photo_WOW-Fuel-Forecourt.jpg" alt="WOW Fuel attendant in a red WOW shirt fuelling a taxi while chatting with the owner" loading="lazy"><span class="concept">Concept</span><figcaption><b>Fuel at the forecourt</b><span>A WOW Fuel attendant and an owner at the pump. Show the people together, with the brand in the setting.</span></figcaption></figure>
+    <figure class="shot"><img src="Images/web/WOW_Photo_Commuter-Cashless-Payment.jpg" alt="Commuter tapping her phone on the driver's card machine at a taxi rank" loading="lazy"><span class="concept">Concept</span><figcaption><b>Paying without cash</b><span>A commuter pays by phone at the taxi window. Show the hands and the smiles, not a screen close-up.</span></figcaption></figure>
+    <figure class="shot"><img src="Images/web/WOW_Photo_Agent-At-The-Rank.jpg" alt="WOW Agent in a red cap and shirt helping a driver with his phone and a WOW SIM card" loading="lazy"><span class="concept">Concept</span><figcaption><b>The agent at the rank</b><span>A WOW Agent in branded kit helps a driver sign up or get a SIM. Show a real conversation.</span></figcaption></figure>
+    <figure class="shot"><img src="Images/web/WOW_Photo_Scholars-Palm-Scan.jpg" alt="School learners in uniform boarding a taxi, one scanning her palm on the door reader" loading="lazy"><span class="concept">Concept</span><figcaption><b>Scholars boarding</b><span>Learners in uniform board with a palm scan at the door. Real shoots need signed parental consent.</span></figcaption></figure>
+    <figure class="shot"><img src="Images/web/WOW_Photo_Field-Operations.jpg" alt="WOW field technician checking a taxi wheel with a row of taxis and staff behind him" loading="lazy"><span class="concept">Concept</span><figcaption><b>Field operations</b><span>WOW field teams checking the fleet at the rank. Show pride and care, with a clean row of vehicles.</span></figcaption></figure>
   </div>
   <div class="dosdonts" style="margin-top:16px">
     <div class="dd yes"><h4>✓ Do</h4><ul><li>Shoot on location in the Eastern Cape: Gqeberha, Mthatha, Komani, East London.</li><li>Use natural daylight, rich warm tones and a real sense of movement.</li><li>Get signed model releases for everyone, and parental consent for all minors.</li><li>Leave clear space on one side for a headline and a Tab.</li></ul></div>
-    <div class="dd no"><h4>✕ Don’t</h4><ul><li>Use generic or overseas stock, or AI-generated people.</li><li>Show crowding, conflict, cash in hand or damaged vehicles.</li><li>Use heavy filters, black-and-white or duotones other than Red.</li><li>Show readable number plates or real commuters’ phone screens.</li></ul></div>
+    <div class="dd no"><h4>✕ Don’t</h4><ul><li>Use generic or overseas stock. AI-generated people are for concepts and internal mock-ups only, never public campaigns.</li><li>Show crowding, conflict, cash in hand or damaged vehicles.</li><li>Use heavy filters, black-and-white or duotones other than Red.</li><li>Show readable number plates or real commuters’ phone screens.</li></ul></div>
   </div>
 </section>
 
@@ -931,11 +935,11 @@ figure{margin:0}
         <div class="wh">
           <div><span class="ey">WEALTH ON WHEELS</span><h4>Crafted and <span class="red">owned</span> by the public transport industry.</h4><p>South Africa’s largest collectively owned public transport structure, running on next-generation technology.</p>
             <div class="b"><span style="background:var(--wow-red-deep);color:#fff">Explore the platform</span><span style="box-shadow:inset 0 0 0 .3cqw var(--wow-tar)">Why WOW</span></div></div>
-          <div class="ph"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 50 L130 20 L40 120 L220 80 L120 230" fill="none" stroke="#EB4C44" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="ph"><img src="Images/web/WOW_Photo_Owner-Golden-Hour.jpg" alt="" loading="lazy"></div>
           <div class="stats2"><div><b>~67 000</b><small>Operators</small></div><div><b>~105 000</b><small>Minibus taxis</small></div><div><b>186 / 45</b><small>Co-operatives</small></div><div><b>~1/3</b><small>National fleet</small></div></div>
         </div>
       </div>
-      <figcaption><b>Website hero</b>Sentence-case headline with one red word, a Red Deep primary button, and a stat bar in tabular numbers. Real photography goes where the Route placeholder is.</figcaption>
+      <figcaption><b>Website hero</b>Sentence-case headline with one red word, a Red Deep primary button, and a stat bar in tabular numbers. The photo sits on the right, with the subject facing into the page.</figcaption>
     </figure>
   </div>
 

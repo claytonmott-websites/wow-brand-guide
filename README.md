@@ -6,3 +6,4 @@ The WOW brand guide (September 2026): logo, colour, typography, graphic elements
 - `WOW-Brand-Guidelines-v2.0.pdf` — PDF version (A4 landscape)
 - `wow-tokens.css` — design tokens for websites and apps
 - `logos/` — logo files in Red, White and Tar, as SVG and PNG
+- `Images/web/` — concept photography (AI-generated references, web-optimised JPEG)
