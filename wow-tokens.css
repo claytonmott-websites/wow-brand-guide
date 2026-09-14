@@ -1,0 +1,103 @@
+/* ==========================================================
+   WOW — Wealth on Wheels · Design tokens v2.0 (September 2026)
+   Source of truth for websites, apps and digital templates.
+   Fonts: https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Figtree:ital,wght@0,400..800;1,400..800&display=swap
+   ========================================================== */
+
+:root {
+  /* Brand colour — core */
+  --wow-red: #EB4C44;         /* Logo, large type, colour blocks */
+  --wow-red-deep: #C8352D;    /* Buttons, links, small red text (AA on white) */
+  --wow-red-press: #A92B24;   /* Hover / pressed state */
+  --wow-oxblood: #3C0F11;     /* Deep ground, premium / investor material */
+  --wow-tar: #1E1A19;         /* Primary text, dark grounds */
+  --wow-white: #FFFFFF;
+
+  /* Neutrals (warm, tuned to WOW Red) */
+  --wow-chalk: #F6F3F1;       /* Section and card surfaces */
+  --wow-stone: #E7E1DE;       /* Borders, dividers */
+  --wow-ash: #6E6563;         /* Secondary text (AA on white and chalk) */
+
+  /* Focus-area accents — wayfinding only, never replace WOW Red */
+  --wow-yellow: #FFC72C;      /* Fuel, Scholar — Tar text only */
+  --wow-blue: #2F5BEA;        /* Mobile, WOW-Fi, Connect — White text */
+  --wow-green: #1FAF6B;       /* Wallet, Merchants — Tar text only */
+  --wow-pink: #F2579B;        /* LuckyX, WOW-Go — Tar text only */
+
+  /* Semantic */
+  --wow-bg: var(--wow-white);
+  --wow-surface: var(--wow-chalk);
+  --wow-border: var(--wow-stone);
+  --wow-text: var(--wow-tar);
+  --wow-text-muted: var(--wow-ash);
+  --wow-link: var(--wow-red-deep);
+  --wow-action: var(--wow-red-deep);
+  --wow-action-hover: var(--wow-red-press);
+  --wow-focus-ring: 0 0 0 3px var(--wow-white), 0 0 0 6px var(--wow-red-deep);
+  --wow-success: #1B7F50;
+  --wow-warning: #9A6200;
+  --wow-danger: var(--wow-red-deep);
+
+  /* Typography */
+  --wow-font-display: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --wow-font-text: "Figtree", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --wow-display-stretch: 108%;           /* font-stretch for Archivo headlines */
+
+  --wow-size-display: clamp(3.25rem, 7vw + 1rem, 7.5rem);
+  --wow-size-h1: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  --wow-size-h2: clamp(2rem, 2.2vw + 1rem, 3rem);
+  --wow-size-h3: clamp(1.375rem, 1vw + 1rem, 1.75rem);
+  --wow-size-body-l: 1.25rem;
+  --wow-size-body: 1.0625rem;
+  --wow-size-small: 0.875rem;
+  --wow-size-eyebrow: 0.8125rem;
+
+  --wow-leading-display: 0.9;
+  --wow-leading-heading: 1.02;
+  --wow-leading-body: 1.55;
+  --wow-tracking-display: -0.03em;
+  --wow-tracking-heading: -0.02em;
+  --wow-tracking-eyebrow: 0.1em;
+
+  /* Spacing — 4px base */
+  --wow-space-1: 4px;
+  --wow-space-2: 8px;
+  --wow-space-3: 12px;
+  --wow-space-4: 16px;
+  --wow-space-5: 24px;
+  --wow-space-6: 32px;
+  --wow-space-7: 48px;
+  --wow-space-8: 64px;
+  --wow-space-9: 96px;
+  --wow-space-10: 144px;
+
+  /* Radius */
+  --wow-radius-sm: 8px;
+  --wow-radius-md: 16px;
+  --wow-radius-lg: 24px;
+  --wow-radius-pill: 999px;              /* Anything you can press */
+  /* The Tab: pill with one tight top-right corner. Fixed heights only. */
+  --wow-tab-sm: 16px 6px 16px 16px;      /* 32px high: labels, hashtags */
+  --wow-tab-md: 28px 9px 28px 28px;      /* 56px high: logo holders */
+  --wow-tab-lg: 48px 14px 48px 48px;     /* 96px high: hero logo holders */
+
+  /* Elevation — floating UI only (menus, sticky nav, dialogs) */
+  --wow-shadow-float: 0 1px 2px rgba(30, 26, 25, 0.08), 0 8px 24px rgba(30, 26, 25, 0.10);
+
+  /* Layout */
+  --wow-container: 1240px;
+  --wow-gutter: 24px;
+  --wow-page-margin: clamp(16px, 4vw, 48px);
+  --wow-bp-sm: 640px;
+  --wow-bp-md: 960px;
+  --wow-bp-lg: 1280px;
+
+  /* Motion */
+  --wow-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --wow-duration-fast: 150ms;
+  --wow-duration: 250ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --wow-duration-fast: 0ms; --wow-duration: 0ms; }
+}

@@ -1,0 +1,1005 @@
+<title>WOW Brand Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Figtree:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --wow-red:#EB4C44; --wow-red-deep:#C8352D; --wow-red-press:#A92B24; --wow-oxblood:#3C0F11;
+  --wow-tar:#1E1A19; --wow-white:#FFFFFF; --wow-chalk:#F6F3F1; --wow-stone:#E7E1DE; --wow-ash:#6E6563;
+  --wow-yellow:#FFC72C; --wow-blue:#2F5BEA; --wow-green:#1FAF6B; --wow-pink:#F2579B;
+  --display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Figtree","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --margin:clamp(16px,4vw,48px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--wow-white);color:var(--wow-tar);font:400 17px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--wow-red-deep)}
+:focus-visible{outline:3px solid var(--wow-red-deep);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+code,.mono{font-family:var(--mono);font-size:.82em}
+
+/* ---------- Shell ---------- */
+.shell{display:grid;grid-template-columns:240px minmax(0,1fr)}
+.rail{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--wow-stone);padding:28px 24px;display:flex;flex-direction:column;gap:28px;background:var(--wow-white)}
+.rail img{width:92px}
+.rail nav{display:flex;flex-direction:column;gap:2px}
+.rail a{display:flex;gap:12px;align-items:baseline;text-decoration:none;color:var(--wow-ash);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px}
+.rail a span{font:600 11px/1 var(--mono);color:var(--wow-stone);width:18px;flex:none;transition:color .2s}
+.rail a:hover{color:var(--wow-tar);background:var(--wow-chalk)}
+.rail a[aria-current="true"]{color:var(--wow-tar);background:var(--wow-chalk)}
+.rail a[aria-current="true"] span{color:var(--wow-red)}
+.rail .meta{margin-top:auto;font-size:12.5px;color:var(--wow-ash);line-height:1.5}
+main{min-width:0}
+.wrap{max-width:1120px;padding-inline:var(--margin);margin-inline:auto}
+
+@media (max-width:960px){
+  .shell{display:block}
+  .rail{position:sticky;top:0;z-index:20;height:auto;flex-direction:row;align-items:center;padding:10px var(--margin);gap:16px;border-right:0;border-bottom:1px solid var(--wow-stone)}
+  .rail img{width:64px;flex:none}
+  .rail nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  .rail a{white-space:nowrap;padding:6px 10px}
+  .rail a span,.rail .meta{display:none}
+}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--wow-red);color:var(--wow-white);position:relative;overflow:hidden}
+.hero .wrap{padding-block:clamp(40px,7vw,88px) clamp(40px,6vw,72px);position:relative;z-index:1;display:grid;gap:clamp(28px,5vw,56px)}
+.hero-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-weight:600;font-size:14px;letter-spacing:.02em}
+.hero-lockup{width:min(720px,100%)}
+.hero-foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:end}
+.hero-foot h1{font:900 clamp(30px,4.2vw,52px)/1 var(--display);font-stretch:108%;letter-spacing:-.025em}
+.hero-foot p{font-size:17px;max-width:44ch;opacity:.95}
+.route-bg{position:absolute;right:-6%;top:-10%;width:62%;height:130%;pointer-events:none}
+@media (max-width:760px){.hero-foot{grid-template-columns:1fr}.route-bg{width:120%;right:-50%;opacity:.7}}
+
+/* ---------- Chapters ---------- */
+.chapter{padding-block:clamp(64px,9vw,120px) 0}
+.chapter + .chapter{border-top:1px solid var(--wow-stone);margin-top:clamp(64px,9vw,120px)}
+.ch-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+.ch-num{font:700 13px/1 var(--mono);color:var(--wow-red-deep);letter-spacing:.06em;margin-bottom:14px;display:block}
+.ch-head h2{font:900 clamp(44px,6.4vw,84px)/.92 var(--display);font-stretch:108%;letter-spacing:-.035em}
+.ch-head p{color:#403836;font-size:18px;max-width:52ch}
+@media (max-width:760px){.ch-head{grid-template-columns:1fr}}
+.sub-h{font:800 22px/1.1 var(--display);font-stretch:104%;letter-spacing:-.015em;margin:56px 0 8px}
+.sub-lede{color:var(--wow-ash);max-width:62ch;margin-bottom:24px}
+.eyebrow{font:700 12.5px/1.2 var(--text);letter-spacing:.1em;text-transform:uppercase}
+.muted{color:var(--wow-ash)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* ---------- 01 Foundation ---------- */
+.manifesto{font:800 clamp(28px,3.6vw,46px)/1.06 var(--display);font-stretch:104%;letter-spacing:-.025em;max-width:24ch}
+.manifesto em{font-style:normal;color:var(--wow-red)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--wow-tar);margin-top:48px}
+.stat{padding:20px 20px 24px 0;border-bottom:1px solid var(--wow-stone)}
+.stat b{display:block;font:800 clamp(34px,4vw,52px)/1 var(--display);font-stretch:100%;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat span{font-size:14.5px;color:var(--wow-ash)}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.siya{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;background:var(--wow-tar);color:var(--wow-white);border-radius:24px;padding:clamp(24px,4vw,48px);margin-top:56px;align-items:center}
+.siya img{width:100%;max-width:420px}
+.siya h3{font:800 24px/1.1 var(--display);margin-bottom:12px}
+.siya p{color:#DCD5D2;margin-bottom:12px;max-width:58ch}
+.siya dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:18px 0 0;font-size:15px}
+.siya dt{font-family:var(--mono);font-size:13px;color:var(--wow-red)}
+.siya dd{margin:0;color:#DCD5D2}
+@media (max-width:760px){.siya{grid-template-columns:1fr}}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--wow-stone)}
+.pillar{padding:22px 20px 22px 0;border-bottom:1px solid var(--wow-stone)}
+.pillar h4{font:800 19px/1.15 var(--display);margin-bottom:8px}
+.pillar p{font-size:15px;color:#4A4240}
+@media (max-width:900px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+.audience{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.audience span{border:1.5px solid var(--wow-tar);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14.5px}
+
+/* ---------- 02 Logo ---------- */
+.plate{border-radius:24px;display:grid;place-items:center;padding:clamp(28px,5vw,56px);min-height:220px;position:relative}
+.plate .cap{position:absolute;left:18px;bottom:14px;font-size:12.5px;font-weight:600;opacity:.8}
+.plate-lg{min-height:340px}
+.bg-white{background:var(--wow-white);border:1px solid var(--wow-stone);color:var(--wow-tar)}
+.bg-chalk{background:var(--wow-chalk);color:var(--wow-tar)}
+.bg-red{background:var(--wow-red);color:var(--wow-white)}
+.bg-tar{background:var(--wow-tar);color:var(--wow-white)}
+.bg-ox{background:var(--wow-oxblood);color:var(--wow-white)}
+.bg-yellow{background:var(--wow-yellow);color:var(--wow-tar)}
+.bg-blue{background:var(--wow-blue);color:var(--wow-white)}
+.bg-green{background:var(--wow-green);color:var(--wow-tar)}
+.bg-pink{background:var(--wow-pink);color:var(--wow-tar)}
+.logo-family{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+.logo-family .stack{display:grid;gap:16px}
+@media (max-width:760px){.logo-family{grid-template-columns:1fr}}
+.spec{margin-top:10px;font-size:14.5px}
+.spec b{display:block;font-weight:700}
+.spec span{color:var(--wow-ash)}
+.appicon{width:112px;aspect-ratio:1;border-radius:26px;background:var(--wow-red);display:grid;place-items:center}
+.appicon img{width:70%}
+
+.clear{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
+.clear-fig{background:var(--wow-chalk);border-radius:24px;padding:clamp(20px,4vw,48px);display:grid;place-items:center;overflow-x:auto}
+.cs{--x:26px;position:relative;padding:calc(var(--x)*2);outline:1.5px dashed var(--wow-red);outline-offset:0;background:repeating-linear-gradient(45deg,rgba(235,76,68,.07) 0 6px,transparent 6px 12px)}
+.cs-inner{background:var(--wow-chalk);outline:1px solid rgba(30,26,25,.25)}
+.cs img{height:104px;width:auto;max-width:none}
+.xmark{position:absolute;width:var(--x);height:var(--x);border-radius:50%;background:var(--wow-red);color:#fff;font:700 12px/var(--x) var(--mono);text-align:center}
+.clear ul,.rules{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.clear li,.rules li{padding-left:22px;position:relative}
+.clear li::before,.rules li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:5px 2px 5px 5px;background:var(--wow-red)}
+@media (max-width:760px){.clear{grid-template-columns:1fr}}
+.minsize{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.minsize .plate{min-height:150px}
+@media (max-width:640px){.minsize{grid-template-columns:1fr}}
+
+.subbrands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px;background:var(--wow-white);border:1px solid var(--wow-stone);border-radius:24px;padding:clamp(24px,4vw,48px)}
+.sb{display:flex;align-items:flex-end;gap:10px}
+.sb img{height:44px;width:auto}
+.tabel{display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:13px 5px 13px 13px;background:var(--wow-tar);color:#fff;font:700 12.5px/1 var(--text);letter-spacing:.1em;margin-bottom:2px;white-space:nowrap}
+@media (max-width:640px){.subbrands{grid-template-columns:1fr}}
+
+.misuse{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.mis .plate{min-height:150px;padding:24px;overflow:hidden}
+.mis .plate img{width:78%}
+.mis p{font-size:14.5px;margin-top:10px;display:flex;gap:8px}
+.mis p::before{content:"✕";color:var(--wow-red-deep);font-weight:800}
+@media (max-width:900px){.misuse{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- 03 Colour ---------- */
+.sw-core{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:16px}
+.sw-core .sw:first-child{grid-row:span 2;min-height:420px}
+@media (max-width:760px){.sw-core{grid-template-columns:1fr 1fr}.sw-core .sw:first-child{grid-column:span 2;grid-row:auto;min-height:280px}}
+.sw{border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;min-height:200px;border:0;text-align:left;font:inherit;cursor:pointer;position:relative;transition:transform .2s}
+.sw:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.sw{transition:none}.sw:hover{transform:none}}
+.sw.ring{box-shadow:inset 0 0 0 1px var(--wow-stone)}
+.sw h3{font:800 22px/1.05 var(--display);font-stretch:104%}
+.sw .role{font-size:13.5px;opacity:.85;margin-top:4px}
+.sw .vals{font:500 12.5px/1.65 var(--mono);display:grid}
+.sw .vals b{font-weight:600}
+.sw .copied{position:absolute;top:18px;right:18px;font:700 11px/1 var(--text);letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .2s}
+.sw.done .copied{opacity:1}
+.sw-accent{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sw-accent .sw{min-height:230px}
+@media (max-width:900px){.sw-accent{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ratio{display:flex;height:64px;border-radius:16px;overflow:hidden;margin-top:8px}
+.ratio div{display:flex;align-items:flex-end;padding:8px 10px;font:600 12px/1 var(--mono)}
+.ratio-key{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px;color:var(--wow-ash);margin-top:12px}
+.note{background:var(--wow-chalk);border-radius:16px;padding:18px 22px;font-size:15px;color:#4A4240;margin-top:24px;max-width:78ch}
+.note b{color:var(--wow-tar)}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--wow-stone);border-radius:16px}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:640px}
+th{font:700 12px/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--wow-ash);text-align:left;padding:14px 18px;background:var(--wow-chalk)}
+td{padding:12px 18px;border-top:1px solid var(--wow-stone);vertical-align:middle}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13.5px}
+.chip{display:inline-flex;align-items:center;justify-content:center;width:64px;height:36px;border-radius:10px;font:800 17px/1 var(--display)}
+.pass{display:inline-block;font:700 11.5px/1 var(--text);letter-spacing:.06em;padding:6px 9px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+.pass.aaa,.pass.aa{background:#DCF2E6;color:#135C3A}
+.pass.lg{background:#FFF0C7;color:#6B4700}
+.pass.no{background:#FBE0DE;color:#8E231D}
+.dot{display:inline-block;width:14px;height:14px;border-radius:7px 3px 7px 7px;vertical-align:-2px;margin-right:8px}
+
+/* ---------- 04 Type ---------- */
+.specimen{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.specimen{grid-template-columns:1fr}}
+.spec-card{border-radius:24px;padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;gap:18px;min-width:0}
+.spec-card .big{font:900 clamp(88px,12vw,168px)/.85 var(--display);font-stretch:108%;letter-spacing:-.04em}
+.spec-card .big2{font:600 clamp(80px,11vw,150px)/.85 var(--text);letter-spacing:-.03em}
+.spec-card .glyphs{font-size:19px;line-height:1.45;word-break:break-all;opacity:.9}
+.spec-card .fname{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.spec-card .fname h3{font:800 26px/1 var(--display)}
+.weights{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px}
+.scale{display:grid;border-top:2px solid var(--wow-tar)}
+.scale-row{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--wow-stone);align-items:baseline}
+.scale-row .lbl{font-size:13px;color:var(--wow-ash);line-height:1.5}
+.scale-row .lbl b{display:block;color:var(--wow-tar);font-size:14.5px}
+.scale-row .lbl code{font-size:12px}
+@media (max-width:640px){.scale-row{grid-template-columns:1fr;gap:8px}}
+.t-display{font:900 clamp(52px,7vw,104px)/.9 var(--display);font-stretch:108%;letter-spacing:-.03em}
+.t-h1{font:900 clamp(40px,4.6vw,64px)/1.0 var(--display);font-stretch:108%;letter-spacing:-.025em}
+.t-h2{font:800 clamp(30px,3vw,44px)/1.02 var(--display);font-stretch:104%;letter-spacing:-.02em}
+.t-h3{font:700 26px/1.15 var(--display);letter-spacing:-.01em}
+.t-bodyl{font:400 20px/1.5 var(--text);max-width:60ch}
+.t-body{font:400 17px/1.55 var(--text);max-width:65ch}
+.t-small{font:500 14px/1.5 var(--text)}
+.t-stat{font:800 64px/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.red{color:var(--wow-red)}
+.dosdonts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:640px){.dosdonts{grid-template-columns:1fr}}
+.dd{border-radius:20px;padding:22px 24px;background:var(--wow-chalk)}
+.dd h4{font:700 12.5px/1 var(--text);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dd.yes h4{color:#135C3A}.dd.no h4{color:#8E231D}
+.dd ul{margin:0;padding-left:18px;display:grid;gap:8px;font-size:15.5px}
+
+/* ---------- 05 Elements ---------- */
+.el-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:stretch}
+@media (max-width:760px){.el-row{grid-template-columns:1fr}}
+.tabdemo{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center}
+.tab-logo{height:96px;padding:0 40px;border-radius:48px 14px 48px 48px;background:var(--wow-red);display:flex;align-items:center}
+.tab-logo img{height:50px;width:auto}
+.tab-logo.out{background:transparent;box-shadow:inset 0 0 0 4px var(--wow-red)}
+.hash{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:22px 8px 22px 22px;background:var(--wow-red);color:#fff;font:800 20px/1 var(--text)}
+.anatomy{position:relative;width:100%;max-width:420px;margin-inline:auto}
+.anatomy svg{width:100%;height:auto;display:block}
+.routes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-radius:24px;overflow:hidden}
+.routes svg{width:100%;height:auto;display:block}
+@media (max-width:760px){.routes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.photo-frame{position:relative;border-radius:24px;aspect-ratio:4/5;overflow:hidden;max-width:100%}
+.photo-frame .hash{position:absolute;left:0;bottom:0;border-radius:0 22px 0 24px;height:48px}
+
+/* ---------- 06 Photography ---------- */
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.shots{grid-template-columns:1fr}}
+.shot{border-radius:24px;aspect-ratio:4/3;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.shot svg{position:absolute;inset:0;width:100%;height:100%}
+.shot div{position:relative}
+.shot b{font:800 19px/1.1 var(--display);display:block;margin-bottom:6px}
+.shot span{font-size:14px;line-height:1.45;display:block;max-width:34ch}
+
+/* ---------- 07 Voice ---------- */
+.voice{display:grid;gap:0;border-top:2px solid var(--wow-tar)}
+.vrow{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,1.1fr);gap:28px;padding:28px 0;border-bottom:1px solid var(--wow-stone)}
+.vrow h3{font:800 24px/1.05 var(--display);font-stretch:104%;margin-bottom:8px}
+.vrow p{font-size:15.5px;color:#4A4240}
+.say{font-size:16px;line-height:1.45}
+.say .eyebrow{display:block;margin-bottom:8px}
+.say.y .eyebrow{color:#135C3A}.say.n .eyebrow{color:#8E231D}
+.say.n q{color:var(--wow-ash);text-decoration:line-through;text-decoration-color:rgba(200,53,45,.5)}
+q{quotes:"“" "”"}
+@media (max-width:860px){.vrow{grid-template-columns:1fr;gap:14px}}
+.lines{display:flex;flex-wrap:wrap;gap:10px}
+.lines span{font:800 clamp(18px,2vw,24px)/1 var(--display);font-stretch:104%;padding:14px 20px;border-radius:26px 9px 26px 26px;background:var(--wow-chalk)}
+.lines span:nth-child(1){background:var(--wow-red);color:#fff}
+.lines span:nth-child(3){background:var(--wow-tar);color:#fff}
+.style-tbl td:first-child{font-weight:600;white-space:nowrap}
+.style-tbl td:nth-child(3){color:var(--wow-ash)}
+
+/* ---------- 08 Web ---------- */
+.code{position:relative;background:var(--wow-tar);color:#EDE7E4;border-radius:20px;overflow:hidden}
+.code pre{margin:0;padding:24px;overflow:auto;max-height:440px;font:400 13px/1.65 var(--mono)}
+.code .c{color:#9C918E}.code .p{color:#FF8F87}.code .v{color:#FFD774}
+.copybtn{position:absolute;top:14px;right:14px;height:36px;padding:0 16px;border-radius:999px;border:0;background:var(--wow-white);color:var(--wow-tar);font:700 13.5px/1 var(--text);cursor:pointer}
+.copybtn:hover{background:var(--wow-chalk)}
+.tokens-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.tokens-strip{grid-template-columns:1fr}}
+.space-scale{display:grid;gap:8px}
+.space-scale div{display:grid;grid-template-columns:64px 44px 1fr;gap:12px;align-items:center;font:500 12.5px/1 var(--mono)}
+.space-scale i{display:block;height:14px;background:var(--wow-red);border-radius:3px}
+.radii{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end}
+.radii div{text-align:center;font:500 12px/1.4 var(--mono);color:var(--wow-ash)}
+.radii i{display:block;width:76px;height:56px;background:var(--wow-chalk);border:2px solid var(--wow-tar);margin-bottom:8px}
+.comp{border:1px solid var(--wow-stone);border-radius:24px;padding:clamp(20px,3vw,32px);display:grid;gap:18px;align-content:start}
+.comp h4{font:700 12.5px/1 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--wow-ash)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 26px;border-radius:999px;font:700 16px/1 var(--text);border:0;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background-color .15s,color .15s}
+.btn-primary{background:var(--wow-red-deep);color:#fff}
+.btn-primary:hover{background:var(--wow-red-press)}
+.btn-secondary{background:transparent;color:var(--wow-tar);box-shadow:inset 0 0 0 2px var(--wow-tar)}
+.btn-secondary:hover{background:var(--wow-tar);color:#fff}
+.btn-onred{background:#fff;color:var(--wow-tar)}
+.btn-ghost-w{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn-sm{height:40px;padding:0 18px;font-size:14.5px}
+.field{display:grid;gap:6px}
+.field label{font:700 12.5px/1 var(--text);letter-spacing:.08em;text-transform:uppercase}
+.field input,.field select{height:52px;border-radius:12px;border:1.5px solid #BDB4B1;background:#fff;padding:0 16px;font:400 16px/1 var(--text);color:var(--wow-tar);width:100%}
+.field input:focus,.field select:focus{outline:none;border-color:var(--wow-tar);box-shadow:0 0 0 3px #fff,0 0 0 6px var(--wow-red-deep)}
+.field small{font-size:13.5px;color:var(--wow-ash)}
+.fa-card{background:var(--wow-chalk);border-radius:24px;padding:24px;display:grid;gap:10px;position:relative}
+.fa-card .n{font:600 12px/1 var(--mono);color:var(--wow-ash)}
+.fa-card h5{font:800 24px/1.05 var(--display);margin:0}
+.fa-card p{font-size:15px;color:#4A4240}
+.fa-card .lbl{justify-self:start;height:28px;display:inline-flex;align-items:center;padding:0 12px;border-radius:14px 5px 14px 14px;font:700 12px/1 var(--text);letter-spacing:.1em}
+.navmock{display:flex;align-items:center;gap:20px;padding:14px 20px;border:1px solid var(--wow-stone);border-radius:18px;flex-wrap:wrap}
+.navmock img{height:30px;width:auto}
+.navmock ul{display:flex;gap:18px;list-style:none;margin:0 auto 0 12px;padding:0;font-weight:600;font-size:15px;flex-wrap:wrap}
+.navmock li:first-child{color:var(--wow-red-deep)}
+
+/* ---------- 09 Applications ---------- */
+.apps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.apps{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:560px){.apps{grid-template-columns:1fr}}
+.app figcaption{font-size:14px;margin-top:10px;color:var(--wow-ash)}
+.app figcaption b{color:var(--wow-tar);display:block}
+figure{margin:0}
+.post{container-type:inline-size;aspect-ratio:4/5;border-radius:12px;overflow:hidden;position:relative}
+.post-in{position:absolute;inset:0;padding:7cqw;display:flex;flex-direction:column}
+.post .pl{height:11cqw;padding:0 4.5cqw;border-radius:5.5cqw 2cqw 5.5cqw 5.5cqw;background:#fff;display:inline-flex;align-items:center;align-self:flex-start}
+.post .pl img{height:5.8cqw;width:auto}
+.post .ey{font:700 3.6cqw/1 var(--text);letter-spacing:.1em;margin-top:9cqw}
+.post h4{font:900 12.5cqw/.9 var(--display);font-stretch:108%;letter-spacing:-.035em;margin-top:3cqw}
+.post .cta{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:4cqw}
+.post .pill{height:11cqw;padding:0 5cqw;border-radius:99px;background:#fff;color:var(--wow-tar);font:700 4cqw/11cqw var(--text);white-space:nowrap}
+.post .mk{width:15cqw}
+.story{aspect-ratio:9/16}
+.story .big{font:800 24cqw/.9 var(--display);letter-spacing:-.04em;margin-top:auto;font-variant-numeric:tabular-nums}
+.story p{font:600 5.8cqw/1.25 var(--text);margin-top:3cqw}
+.story .sf{margin-top:9cqw;display:flex;justify-content:space-between;align-items:center}
+.story .sf img{width:34cqw}
+.webhero{container-type:inline-size;border:1px solid var(--wow-stone);border-radius:12px;overflow:hidden;background:#fff}
+.bar{display:flex;gap:1cqw;padding:2.2cqw 2.6cqw;border-bottom:1px solid var(--wow-stone);align-items:center}
+.bar i{width:1.8cqw;height:1.8cqw;border-radius:50%;background:var(--wow-stone)}
+.bar img{height:3.6cqw;width:auto;margin-left:3cqw}
+.bar span{margin-left:auto;height:4.6cqw;padding:0 3cqw;border-radius:99px;background:var(--wow-red-deep);color:#fff;font:700 1.9cqw/4.6cqw var(--text)}
+.wh{display:grid;grid-template-columns:1.1fr 1fr;gap:4cqw;padding:5cqw 4cqw}
+.wh .ey{font:700 1.8cqw/1 var(--text);letter-spacing:.1em;color:var(--wow-red-deep)}
+.wh h4{font:900 6.4cqw/.92 var(--display);font-stretch:108%;letter-spacing:-.03em;margin:1.8cqw 0}
+.wh p{font-size:2.1cqw;line-height:1.45;color:#4A4240}
+.wh .b{display:flex;gap:1.5cqw;margin-top:3cqw}
+.wh .b span{height:5.4cqw;padding:0 3cqw;border-radius:99px;font:700 1.9cqw/5.4cqw var(--text);white-space:nowrap}
+.wh .ph{border-radius:3cqw;position:relative;overflow:hidden;background:var(--wow-oxblood);min-height:30cqw}
+.wh .ph svg{position:absolute;inset:0;width:100%;height:100%}
+.wh .stats2{grid-column:span 2;display:grid;grid-template-columns:repeat(4,1fr);border-top:.3cqw solid var(--wow-tar)}
+.wh .stats2 div{padding:1.8cqw 0}
+.wh .stats2 b{display:block;font:800 4cqw/1 var(--display);letter-spacing:-.03em}
+.wh .stats2 small{font-size:1.6cqw;color:var(--wow-ash)}
+.sizes td:nth-child(2){font-family:var(--mono);font-size:13.5px}
+
+/* ---------- 10 Assets ---------- */
+.files{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.files{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.file .plate{min-height:130px;padding:22px}
+.file .plate img{max-height:64px;width:auto}
+.file p{font:500 12px/1.45 var(--mono);margin-top:8px;word-break:break-all}
+.foot{background:var(--wow-tar);color:#fff;margin-top:clamp(80px,10vw,140px)}
+.foot .wrap{padding-block:56px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:end}
+.foot img{width:min(360px,80vw)}
+.foot p{color:#CFC7C4;font-size:14px;max-width:44ch}
+
+/* ---------- Print / PDF: A4 landscape ---------- */
+@page{size:A4 landscape;margin:14mm 16mm 12mm}
+@page :first{margin:0}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{scroll-behavior:auto}
+  html{zoom:.72}
+  .shell{display:block}
+  .rail,.copybtn,.noprint{display:none!important}
+  .wrap{max-width:none;padding-inline:0}
+  .hero{height:291mm;display:flex;align-items:center;break-after:page}
+  .hero .wrap{padding:24mm 28mm;width:100%}
+  .hero-lockup{width:210mm}
+  .chapter{padding-block:0;break-before:page}
+  .chapter + .chapter{border-top:0;margin-top:0}
+  #foundation{break-before:auto}
+  .ch-head{margin-bottom:36px}
+  .sub-h{margin-top:40px;break-after:avoid}
+  .sub-lede{break-after:avoid}
+  .plate,.sw,.spec-card,.fa-card,.dd,.note,.siya,.stat,.pillar,.vrow,.scale-row,tr,.mis,.shot,.app,.file,.photo-frame,.sb,.comp{break-inside:avoid}
+  .plate-lg{min-height:280px}
+  .sw-core .sw:first-child{min-height:360px}
+  .code pre{max-height:none;white-space:pre-wrap}
+  td{padding-block:6px}
+  th{padding-block:9px}
+  .chip{height:28px}
+  .sw:hover{transform:none}
+  .apps{grid-template-columns:1fr .62fr 1fr}
+  .foot{margin-top:0;break-before:page;height:250mm;display:flex;align-items:center;border-radius:0}
+  .foot .wrap{padding:28mm;width:100%}
+  a{text-decoration:none}
+}
+</style>
+
+<div class="shell">
+<aside class="rail" aria-label="Chapters">
+  <img src="logos/WOW_Wordmark_Red.svg" alt="WOW!">
+  <nav>
+    <a href="#foundation"><span>01</span>Foundation</a>
+    <a href="#logo"><span>02</span>Logo</a>
+    <a href="#colour"><span>03</span>Colour</a>
+    <a href="#type"><span>04</span>Typography</a>
+    <a href="#elements"><span>05</span>Graphic elements</a>
+    <a href="#photo"><span>06</span>Photography</a>
+    <a href="#voice"><span>07</span>Voice &amp; tone</a>
+    <a href="#web"><span>08</span>Web system</a>
+    <a href="#applications"><span>09</span>Applications</a>
+    <a href="#assets"><span>10</span>Assets</a>
+  </nav>
+  <p class="meta">Brand Guidelines v2.0<br>September 2026<br>Replaces the August 2025 guide</p>
+</aside>
+
+<main>
+<header class="hero">
+  <svg class="route-bg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M620 60 L250 140 L520 250 L120 360 L470 470 L60 600 L400 700 L-40 820" fill="none" stroke="#E5463E" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div class="wrap">
+    <div class="hero-top"><span>WOW — Wealth on Wheels</span><span>Brand Guidelines · v2.0 · September 2026 <a class="noprint" href="WOW-Brand-Guidelines-v2.0.pdf" style="color:#fff;margin-left:14px">Download PDF ↓</a></span></div>
+    <img class="hero-lockup" src="logos/WOW_Lockup-Siyabangena_White.svg" alt="WOW! Siyabangena!">
+    <div class="hero-foot">
+      <h1>One brand, from the rank to the app to the billboard.</h1>
+      <p>This guide is the single reference for WOW: logos, colour, type, voice and the web design system. Use it on the website, the WOW apps, social media, outdoor signs and partner material.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- 01 FOUNDATION -->
+<section class="chapter" id="foundation">
+  <div class="ch-head">
+    <div><span class="ch-num">01 — FOUNDATION</span><h2>Who we are</h2></div>
+    <p>WOW is South Africa’s industry-owned digital operating system for the minibus taxi economy. It was built by the Eastern Cape Transport Tertiary Co-operative (ECTTC) and belongs to the people who operate it.</p>
+  </div>
+  <p class="manifesto">Crafted and <em>owned</em> by the public transport industry. Ten focus areas. One wallet. One owner.</p>
+
+  <div class="stats">
+    <div class="stat"><b>~67 000</b><span>Taxi operators organised as one</span></div>
+    <div class="stat"><b>~105 000</b><span>Minibus taxis on the network</span></div>
+    <div class="stat"><b>~1/3</b><span>Of South Africa’s national fleet</span></div>
+    <div class="stat"><b>186 / 45</b><span>Primary and secondary co-operatives</span></div>
+    <div class="stat"><b>120 000+</b><span>Scholars transported daily</span></div>
+    <div class="stat"><b>~15 000</b><span>E-hailing vehicles in the co-op</span></div>
+  </div>
+
+  <h3 class="sub-h">Brand pillars</h3>
+  <p class="sub-lede">Every piece of WOW communication should prove at least one of these.</p>
+  <div class="pillars">
+    <div class="pillar"><h4>Owned from within</h4><p>The platform, the wallet, the data and the revenue belong to the co-operative, not to a bank or an overseas app.</p></div>
+    <div class="pillar"><h4>Organised as one</h4><p>67 000 operators negotiating, paying and earning as a single fleet. Scale is our proof.</p></div>
+    <div class="pillar"><h4>Built for the rank</h4><p>Help happens where the industry works, on any phone, in the commuter’s own language.</p></div>
+    <div class="pillar"><h4>Proudly South African</h4><p>Township-fluent and pan-South African. We are not a foreign brand passing through.</p></div>
+  </div>
+
+  <div class="siya">
+    <img src="logos/WOW_Siyabangena-Badge_White.svg" alt="Siyabangena! badge">
+    <div>
+      <h3>Siyabangena! — our rallying cry</h3>
+      <p>It means “we’re getting in”, with confidence and intent. The root verb <i>-ngena</i>, to enter, is the everyday verb of taxi life: you <i>ngena</i> a taxi when you board. It reads instantly in isiZulu and isiXhosa.</p>
+      <p>Siyabangena always sits with the logo in its badge, and closes our biggest messages. It is never used as a polite greeting.</p>
+      <dl><dt>Say</dt><dd>see-yah-bah-NGEH-nah</dd><dt>Means</dt><dd>“We are entering / we’re getting in”</dd><dt>Write</dt><dd>Siyabangena! — capital S, with the exclamation mark</dd></dl>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Who we talk to</h3>
+  <p class="sub-lede">One brand serves many audiences. The tone changes a little for each, but the identity stays the same.</p>
+  <div class="audience"><span>Taxi &amp; fleet owners</span><span>Drivers</span><span>Commuters</span><span>Associations &amp; co-ops</span><span>Parents &amp; schools</span><span>Merchants &amp; spazas</span><span>Government</span><span>Brands &amp; sponsors</span><span>Investors</span></div>
+</section>
+
+<!-- 02 LOGO -->
+<section class="chapter" id="logo">
+  <div class="ch-head">
+    <div><span class="ch-num">02 — LOGO</span><h2>The WOW! logo</h2></div>
+    <p>The wordmark is custom lettering and must never be retyped. Always use the master files. There are four parts to the logo family, and each has a job.</p>
+  </div>
+
+  <div class="logo-family">
+    <div>
+      <div class="plate plate-lg bg-white"><img src="logos/WOW_Lockup-Siyabangena_Red.svg" alt="WOW! with Siyabangena badge" style="width:min(460px,100%)"></div>
+      <div class="spec"><b>Primary lockup — WOW! + Siyabangena!</b><span>Use this first. Website headers and footers, campaign end frames, outdoor, and anything that introduces WOW to a new audience.</span></div>
+    </div>
+    <div class="stack">
+      <div>
+        <div class="plate bg-white"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW! wordmark" style="width:min(300px,100%)"></div>
+        <div class="spec"><b>Wordmark</b><span>For small spaces and sub-brand lockups, or where Siyabangena is already said nearby.</span></div>
+      </div>
+      <div class="grid g2">
+        <div><div class="plate bg-chalk" style="min-height:170px"><div class="appicon"><img src="logos/WOW_Mark_White.svg" alt="W! mark"></div></div><div class="spec"><b>W! mark</b><span>App icon, favicon, avatars.</span></div></div>
+        <div><div class="plate bg-chalk" style="min-height:170px"><img src="logos/WOW_Siyabangena-Badge_Red.svg" alt="Siyabangena badge" style="width:100%"></div><div class="spec"><b>Siyabangena badge</b><span>Sign-offs and stickers. Never replaces the logo.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Colourways</h3>
+  <p class="sub-lede">The logo appears in three colours: WOW Red, White and Tar. Use Red on light grounds, White on Red or dark grounds, and Tar on light focus-area accents.</p>
+  <div class="grid g3">
+    <div class="plate bg-white"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="width:70%"><span class="cap">Red on White — default</span></div>
+    <div class="plate bg-red"><img src="logos/WOW_Wordmark_White.svg" alt="" style="width:70%"><span class="cap">White on Red — hero moments</span></div>
+    <div class="plate bg-tar"><img src="logos/WOW_Wordmark_White.svg" alt="" style="width:70%"><span class="cap">White on Tar</span></div>
+    <div class="plate bg-ox"><img src="logos/WOW_Wordmark_White.svg" alt="" style="width:70%"><span class="cap">White on Oxblood — investor</span></div>
+    <div class="plate bg-yellow"><img src="logos/WOW_Wordmark_Tar.svg" alt="" style="width:70%"><span class="cap">Tar on Yellow — Fuel, Scholar</span></div>
+    <div class="plate bg-blue"><img src="logos/WOW_Wordmark_White.svg" alt="" style="width:70%"><span class="cap">White on Blue — Mobile, WOW-Fi</span></div>
+  </div>
+
+  <h3 class="sub-h">Clear space &amp; minimum size</h3>
+  <div class="clear">
+    <div class="clear-fig">
+      <div class="cs">
+        <span class="xmark" style="top:calc(var(--x)*.5);left:calc(50% - var(--x)/2)">x</span>
+        <span class="xmark" style="bottom:calc(var(--x)*.5);left:calc(50% - var(--x)/2)">x</span>
+        <span class="xmark" style="left:calc(var(--x)*.5);top:calc(50% - var(--x)/2)">x</span>
+        <span class="xmark" style="right:calc(var(--x)*.5);top:calc(50% - var(--x)/2)">x</span>
+        <div class="cs-inner"><img src="logos/WOW_Wordmark_Red.svg" alt="Clear space diagram"></div>
+      </div>
+    </div>
+    <ul>
+      <li><b>x = the diameter of the dot in the “!”.</b> Keep at least 2x clear on every side of any logo. No text, image edges or other logos go in this space.</li>
+      <li>Inside a Tab holder (see 05), padding can drop to 1x. The Tab counts as the logo’s clear space.</li>
+      <li>With partner logos, match the wordmark’s cap height to the partner mark’s visual height and separate them with 4x and a 1px Stone rule.</li>
+    </ul>
+  </div>
+  <div class="minsize" style="margin-top:16px">
+    <div><div class="plate bg-white"><img src="logos/WOW_Lockup-Siyabangena_Red.svg" alt="" style="width:160px"></div><div class="spec"><b>Primary lockup</b><span>160 px wide on screen · 40 mm in print</span></div></div>
+    <div><div class="plate bg-white"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="width:72px"></div><div class="spec"><b>Wordmark</b><span>72 px wide · 18 mm</span></div></div>
+    <div><div class="plate bg-white"><img src="logos/WOW_Mark_Red.svg" alt="" style="width:24px"></div><div class="spec"><b>W! mark</b><span>24 px wide · 7 mm. Use it below wordmark minimum.</span></div></div>
+  </div>
+
+  <h3 class="sub-h">Focus-area lockups</h3>
+  <p class="sub-lede">WOW products use the wordmark with a Tab label. The label is Figtree Bold in capitals with 10% tracking. Its height is 60% of the wordmark height, and it is bottom-aligned with a gap of 0.25x. Never invent a new logo for a product.</p>
+  <div class="subbrands">
+    <div class="sb"><img src="logos/WOW_Wordmark_Tar.svg" alt="WOW!"><span class="tabel">WALLET</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Tar.svg" alt="WOW!"><span class="tabel">FUEL</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Tar.svg" alt="WOW!"><span class="tabel">MOBILE</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Tar.svg" alt="WOW!"><span class="tabel">TRACK</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"><span class="tabel" style="background:var(--wow-red-deep)">SCHOLAR</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"><span class="tabel" style="background:var(--wow-red-deep)">MERCHANTS</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"><span class="tabel" style="background:var(--wow-red-deep)">FI</span></div>
+    <div class="sb"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"><span class="tabel" style="background:var(--wow-red-deep)">GO</span></div>
+  </div>
+  <p class="note"><b>Label and wordmark colours must match:</b> a Tar wordmark gets a Tar label, and a Red wordmark gets a Red Deep label. In running text, write the names as WOW Wallet, WOW Fuel, WOW Mobile, WOW-Track, WOW Scholar, WOW Merchants, WOW-Fi and WOW-Go. <b>LuckyX</b> is an endorsed brand with its own name: write “LuckyX by WOW”.</p>
+
+  <h3 class="sub-h">Don’t</h3>
+  <p class="sub-lede">These mistakes turned up on the mock-up website and in past social posts.</p>
+  <div class="misuse">
+    <div class="mis"><div class="plate bg-chalk"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="transform:scaleX(1.35) scaleY(.8)"></div><p>Stretch, squash or skew it</p></div>
+    <div class="mis"><div class="plate bg-chalk"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="transform:rotate(-14deg)"></div><p>Rotate it</p></div>
+    <div class="mis"><div class="plate bg-chalk"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="filter:hue-rotate(215deg) saturate(1.3)"></div><p>Use colours outside Red, White, Tar</p></div>
+    <div class="mis"><div class="plate bg-chalk"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="filter:drop-shadow(5px 7px 5px rgba(0,0,0,.45))"></div><p>Add shadows, glows or bevels</p></div>
+    <div class="mis"><div class="plate bg-pink"><img src="logos/WOW_Wordmark_Red.svg" alt=""></div><p>Place Red on low-contrast grounds</p></div>
+    <div class="mis"><div class="plate bg-chalk"><span style="font:800 54px/1 var(--text);color:var(--wow-red);letter-spacing:-.02em">Wow!</span></div><p>Retype it in any font</p></div>
+    <div class="mis"><div class="plate bg-chalk" style="gap:4px"><img src="logos/WOW_Wordmark_Red.svg" alt="" style="width:60%"><span style="font:700 13px/1 var(--text)">Wealth on Wheels — Crafted and owned</span></div><p>Crowd it with text</p></div>
+    <div class="mis"><div class="plate bg-chalk" style="background:linear-gradient(135deg,#8FA6B8,#C98D5E 55%,#40302A)"><img src="logos/WOW_Wordmark_Red.svg" alt=""></div><p>Drop it on busy photos without a Tab</p></div>
+  </div>
+</section>
+
+<!-- 03 COLOUR -->
+<section class="chapter" id="colour">
+  <div class="ch-head">
+    <div><span class="ch-num">03 — COLOUR</span><h2>Red leads. Always.</h2></div>
+    <p>WOW Red is the brand, and Tar and White do the hard work around it. Four focus-area accents help people find their way between products, but they never take over. Click any swatch to copy its HEX value.</p>
+  </div>
+
+  <div class="sw-core">
+    <button class="sw bg-red" data-hex="#EB4C44" data-cmyk="0 80 75 0"><span class="copied">Copied</span><div><h3>WOW Red</h3><p class="role">Logo, headlines, hero blocks. Our signature.</p></div><div class="vals"></div></button>
+    <button class="sw bg-tar" data-hex="#1E1A19"><span class="copied">Copied</span><div><h3>Tar</h3><p class="role">Text and dark grounds</p></div><div class="vals"></div></button>
+    <button class="sw bg-white ring" data-hex="#FFFFFF"><span class="copied">Copied</span><div><h3>White</h3><p class="role">Primary ground</p></div><div class="vals"></div></button>
+    <button class="sw" style="background:var(--wow-red-deep);color:#fff" data-hex="#C8352D"><span class="copied">Copied</span><div><h3>Red Deep</h3><p class="role">Buttons, links, small red text</p></div><div class="vals"></div></button>
+    <button class="sw bg-ox" data-hex="#3C0F11"><span class="copied">Copied</span><div><h3>Oxblood</h3><p class="role">Premium and investor grounds</p></div><div class="vals"></div></button>
+  </div>
+
+  <h3 class="sub-h">Neutrals</h3>
+  <p class="sub-lede">These are warm greys mixed toward WOW Red, so they sit comfortably beside it. Don’t swap them for generic cool greys.</p>
+  <div class="grid g3">
+    <button class="sw bg-chalk" data-hex="#F6F3F1" style="min-height:160px"><span class="copied">Copied</span><div><h3>Chalk</h3><p class="role">Section and card surfaces</p></div><div class="vals"></div></button>
+    <button class="sw" style="background:var(--wow-stone);min-height:160px" data-hex="#E7E1DE"><span class="copied">Copied</span><div><h3>Stone</h3><p class="role">Borders and dividers</p></div><div class="vals"></div></button>
+    <button class="sw" style="background:var(--wow-ash);color:#fff;min-height:160px" data-hex="#6E6563"><span class="copied">Copied</span><div><h3>Ash</h3><p class="role">Secondary text</p></div><div class="vals"></div></button>
+  </div>
+
+  <h3 class="sub-h">Focus-area accents</h3>
+  <p class="sub-lede">Each colour marks a group of focus areas on the website, in the app and on product material. Use them as labels, section grounds and illustration fills. Never recolour the logo in an accent (Tar is the exception), and never use more than one accent per layout.</p>
+  <div class="sw-accent">
+    <button class="sw bg-yellow" data-hex="#FFC72C"><span class="copied">Copied</span><div><h3>Marking Yellow</h3><p class="role">WOW Fuel · WOW Scholar</p></div><div class="vals"></div></button>
+    <button class="sw bg-blue" data-hex="#2F5BEA"><span class="copied">Copied</span><div><h3>Signal Blue</h3><p class="role">WOW Mobile · WOW-Fi · Connect + Agent</p></div><div class="vals"></div></button>
+    <button class="sw bg-green" data-hex="#1FAF6B"><span class="copied">Copied</span><div><h3>Rand Green</h3><p class="role">Wallet &amp; Payments · Merchants</p></div><div class="vals"></div></button>
+    <button class="sw bg-pink" data-hex="#F2579B"><span class="copied">Copied</span><div><h3>Siya Pink</h3><p class="role">LuckyX · WOW-Go</p></div><div class="vals"></div></button>
+  </div>
+  <p class="note"><b>What changed from 2025:</b> the old Blue, Green, Yellow, Pink and Noir used the exact HEX values of a well-known tech company’s palette (#5865F2, #57F287, #FEE75C, #EB459E, #23272A). They have been replaced with WOW’s own colours, named after taxi-rank life. WOW Red stays the same as the logo files. Oxblood is the old Brown, renamed.</p>
+
+  <h3 class="sub-h">Balance</h3>
+  <p class="sub-lede">This is the typical mix across a campaign or a website. A single social post can go full Red.</p>
+  <div class="ratio" role="img" aria-label="White 50%, Red 25%, Tar 15%, Chalk 7%, Accent 3%">
+    <div style="flex:50;background:#fff;box-shadow:inset 0 0 0 1px var(--wow-stone)">50%</div>
+    <div style="flex:25;background:var(--wow-red);color:#fff">25%</div>
+    <div style="flex:15;background:var(--wow-tar);color:#fff">15%</div>
+    <div style="flex:7;background:var(--wow-chalk)">7</div>
+    <div style="flex:3;background:var(--wow-yellow)"></div>
+  </div>
+  <div class="ratio-key"><span>White 50</span><span>WOW Red 25</span><span>Tar 15</span><span>Chalk 7</span><span>One accent ≤ 3</span></div>
+
+  <h3 class="sub-h">Accessible pairings</h3>
+  <p class="sub-lede">WCAG 2.2 contrast ratios. White text on WOW Red only passes at large sizes (24 px regular, or 19 px bold and up). That’s why buttons and small red text use Red Deep.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Sample</th><th>Text / ground</th><th>Ratio</th><th>Use for</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip" style="background:var(--wow-tar);color:#fff">Aa</span></td><td>White on Tar</td><td class="num">17.3 : 1</td><td><span class="pass aaa">AAA</span> Any text</td></tr>
+      <tr><td><span class="chip" style="background:#fff;color:var(--wow-tar);box-shadow:inset 0 0 0 1px var(--wow-stone)">Aa</span></td><td>Tar on White</td><td class="num">17.3 : 1</td><td><span class="pass aaa">AAA</span> Body copy default</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-yellow);color:var(--wow-tar)">Aa</span></td><td>Tar on Marking Yellow</td><td class="num">11.1 : 1</td><td><span class="pass aaa">AAA</span> Any text</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-green);color:var(--wow-tar)">Aa</span></td><td>Tar on Rand Green</td><td class="num">6.1 : 1</td><td><span class="pass aa">AA</span> Any text</td></tr>
+      <tr><td><span class="chip" style="background:#fff;color:var(--wow-ash);box-shadow:inset 0 0 0 1px var(--wow-stone)">Aa</span></td><td>Ash on White</td><td class="num">5.7 : 1</td><td><span class="pass aa">AA</span> Captions, secondary text</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-blue);color:#fff">Aa</span></td><td>White on Signal Blue</td><td class="num">5.5 : 1</td><td><span class="pass aa">AA</span> Any text</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-pink);color:var(--wow-tar)">Aa</span></td><td>Tar on Siya Pink</td><td class="num">5.4 : 1</td><td><span class="pass aa">AA</span> Any text</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-red-deep);color:#fff">Aa</span></td><td>White on Red Deep</td><td class="num">5.3 : 1</td><td><span class="pass aa">AA</span> Buttons, small text on red</td></tr>
+      <tr><td><span class="chip" style="background:#fff;color:var(--wow-red-deep);box-shadow:inset 0 0 0 1px var(--wow-stone)">Aa</span></td><td>Red Deep on White</td><td class="num">5.3 : 1</td><td><span class="pass aa">AA</span> Links, eyebrows</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-red);color:#fff">Aa</span></td><td>White on WOW Red</td><td class="num">3.7 : 1</td><td><span class="pass lg">Large only</span> Headlines, logo, 19 px bold+</td></tr>
+      <tr><td><span class="chip" style="background:#fff;color:var(--wow-red);box-shadow:inset 0 0 0 1px var(--wow-stone)">Aa</span></td><td>WOW Red on White</td><td class="num">3.7 : 1</td><td><span class="pass lg">Large only</span> Headlines and highlight words</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-green);color:#fff">Aa</span></td><td>White on Rand Green</td><td class="num">2.8 : 1</td><td><span class="pass no">Fail</span> Never</td></tr>
+      <tr><td><span class="chip" style="background:var(--wow-yellow);color:#fff">Aa</span></td><td>White on Marking Yellow</td><td class="num">1.6 : 1</td><td><span class="pass no">Fail</span> Never</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 04 TYPE -->
+<section class="chapter" id="type">
+  <div class="ch-head">
+    <div><span class="ch-num">04 — TYPOGRAPHY</span><h2>Loud headlines, easy reading</h2></div>
+    <p>There are two free Google Fonts families, so the website, Canva, Office, the app team and printers can all use the same files with no licence cost. They replace Halyard Display and Gibson from the 2025 guide.</p>
+  </div>
+
+  <div class="specimen">
+    <div class="spec-card bg-red">
+      <div class="fname"><h3>Archivo</h3><span class="eyebrow">Display · Headlines &amp; numbers</span></div>
+      <div class="big">Ngena.</div>
+      <div class="glyphs" style="font:900 22px/1.35 var(--display);font-stretch:108%">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>R 0123456789 · % / ~ !?</div>
+      <div class="weights"><span>Black 900 · 108% width — headlines</span><span>ExtraBold 800 — stats, sub-heads</span></div>
+    </div>
+    <div class="spec-card bg-chalk">
+      <div class="fname"><h3 style="font-family:var(--text);font-weight:700">Figtree</h3><span class="eyebrow">Text · Body, UI, labels</span></div>
+      <div class="big2">Aa</div>
+      <div class="glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · R25,50 · 67 000</div>
+      <div class="weights"><span>Regular 400 — body</span><span>SemiBold 600 — UI</span><span style="font-weight:700">Bold 700 — buttons, labels</span></div>
+    </div>
+  </div>
+  <p class="note"><b>Fallbacks:</b> if the brand fonts can’t be installed (for example in email or older Office), use <b>Arial Black</b> for headlines and <b>Arial</b> for text. Get the fonts at fonts.google.com/specimen/Archivo and fonts.google.com/specimen/Figtree.</p>
+
+  <h3 class="sub-h">Type scale</h3>
+  <p class="sub-lede">These are the web sizes, and they scale fluidly between mobile and desktop. For print, set headlines at no less than 3× body size.</p>
+  <div class="scale">
+    <div class="scale-row"><div class="lbl"><b>Display</b>Archivo 900 · 108%<br><code>52–120 / 0.9 / −3%</code></div><div class="t-display">Siyabangena!</div></div>
+    <div class="scale-row"><div class="lbl"><b>H1</b>Archivo 900 · 108%<br><code>40–72 / 1.0 / −2.5%</code></div><div class="t-h1">The industry owns the <span class="red">road ahead.</span></div></div>
+    <div class="scale-row"><div class="lbl"><b>H2</b>Archivo 800 · 104%<br><code>32–48 / 1.02 / −2%</code></div><div class="t-h2">Ten focus areas. One wallet. One owner.</div></div>
+    <div class="scale-row"><div class="lbl"><b>H3</b>Archivo 700<br><code>22–28 / 1.15</code></div><div class="t-h3">The fuel you already buy now pays the industry back</div></div>
+    <div class="scale-row"><div class="lbl"><b>Eyebrow</b>Figtree 700 · caps<br><code>13 / 1.2 / +10%</code></div><div class="eyebrow" style="color:var(--wow-red-deep)">WOW Fuel · Launching September 2026</div></div>
+    <div class="scale-row"><div class="lbl"><b>Body large</b>Figtree 400<br><code>20 / 1.5</code></div><div class="t-bodyl">WOW Mobile is the industry’s own mobile network. SIMs are sold at the rank and data doesn’t expire.</div></div>
+    <div class="scale-row"><div class="lbl"><b>Body</b>Figtree 400<br><code>17 / 1.55 · max 65ch</code></div><div class="t-body">Every unit in the wallet is matched by a real rand held in independent custody with one of South Africa’s largest asset managers. Your money is always your money.</div></div>
+    <div class="scale-row"><div class="lbl"><b>Small</b>Figtree 500<br><code>14 / 1.5</code></div><div class="t-small muted">Fields marked * are required.</div></div>
+    <div class="scale-row"><div class="lbl"><b>Stat</b>Archivo 800 · tabular<br><code>48–72 / 1.0</code></div><div class="t-stat">120 000+</div></div>
+  </div>
+
+  <h3 class="sub-h">Setting headlines</h3>
+  <div class="dosdonts">
+    <div class="dd yes"><h4>✓ Do</h4><ul>
+      <li>Use sentence case, and end with a full stop for punch: “One wallet. One owner.”</li>
+      <li>Highlight one key word or phrase in WOW Red, like “Crafted and <b class="red">owned</b>”.</li>
+      <li>Keep headlines to eight words or fewer, and break lines by meaning.</li>
+      <li>Use all caps only for outdoor headlines of five words or fewer.</li>
+    </ul></div>
+    <div class="dd no"><h4>✕ Don’t</h4><ul>
+      <li>Set a whole website headline in caps or mix bold and caps, as the mock-up does.</li>
+      <li>Highlight more than one idea in red per headline.</li>
+      <li>Use Archivo for body copy, or Figtree for display headlines.</li>
+      <li>Track headlines out or add outlines, gradients or shadows.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 05 ELEMENTS -->
+<section class="chapter" id="elements">
+  <div class="ch-head">
+    <div><span class="ch-num">05 — GRAPHIC ELEMENTS</span><h2>The Tab &amp; the Route</h2></div>
+    <p>WOW uses two brand shapes. The Tab holds our voice: logos, labels and hashtags. The Route brings energy: a bold, road-like zigzag drawn from the corridors our taxis drive every day.</p>
+  </div>
+
+  <div class="el-row">
+    <div class="plate bg-chalk" style="min-height:320px;display:flex;flex-direction:column;gap:22px">
+      <div class="tabdemo">
+        <div class="tab-logo"><img src="logos/WOW_Wordmark_White.svg" alt="WOW!"></div>
+        <div class="tab-logo out"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"></div>
+      </div>
+      <div class="tabdemo"><span class="hash">#BeWOW</span><span class="hash" style="background:var(--wow-tar)">#Siyabangena</span><span class="tabel" style="height:32px;border-radius:16px 6px 16px 16px;padding:0 14px">WOW FUEL</span></div>
+    </div>
+    <div class="comp" style="border:0;background:var(--wow-white);padding:0">
+      <div class="anatomy">
+        <svg viewBox="0 0 420 200" role="img" aria-label="Tab shape anatomy: height h, three corners of h/2, top-right corner of h/7">
+          <rect x="40" y="40" width="340" height="112" rx="0" fill="none"/>
+          <path d="M96 40 H364 A16 16 0 0 1 380 56 V96 A56 56 0 0 1 324 152 H96 A56 56 0 0 1 96 40 Z" fill="#EB4C44"/>
+          <line x1="20" y1="40" x2="20" y2="152" stroke="#1E1A19" stroke-width="1.5"/>
+          <line x1="14" y1="40" x2="26" y2="40" stroke="#1E1A19" stroke-width="1.5"/><line x1="14" y1="152" x2="26" y2="152" stroke="#1E1A19" stroke-width="1.5"/>
+          <text x="8" y="101" font-family="JetBrains Mono,monospace" font-size="13" fill="#1E1A19">h</text>
+          <circle cx="364" cy="56" r="16" fill="none" stroke="#1E1A19" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="330" y="26" font-family="JetBrains Mono,monospace" font-size="12" fill="#1E1A19">r = h ÷ 7</text>
+          <text x="46" y="188" font-family="JetBrains Mono,monospace" font-size="12" fill="#1E1A19">other corners r = h ÷ 2</text>
+          <text x="210" y="104" font-family="Figtree,Arial,sans-serif" font-weight="700" font-size="16" fill="#fff" text-anchor="middle">THE TAB</text>
+        </svg>
+      </div>
+      <ul class="rules">
+        <li><b>The Tab is for the brand speaking:</b> logo holders, product labels, hashtags, Siyabangena.</li>
+        <li><b>Full pills are for things you can press:</b> buttons and filters. Keeping them separate makes interactive elements easy to spot.</li>
+        <li>The tight corner always sits top-right, pointing forward like the “!”.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-h">The Route</h3>
+  <p class="sub-lede">One thick zigzag with rounded ends, bleeding off at least two edges. Use two colours from the palette: the Route in a brighter tone over a deeper ground, or Red over a light ground.</p>
+  <div class="routes">
+    <svg viewBox="0 0 300 220" role="img" aria-label="Red route on Oxblood"><rect width="300" height="220" fill="#3C0F11"/><path d="M-30 70 L150 30 L40 150 L260 80 L170 200 L340 160" fill="none" stroke="#EB4C44" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 300 220" role="img" aria-label="Red route on Marking Yellow"><rect width="300" height="220" fill="#FFC72C"/><path d="M40 -20 L-10 110 L170 50 L80 190 L310 90 L250 250" fill="none" stroke="#EB4C44" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 300 220" role="img" aria-label="Green route on Tar"><rect width="300" height="220" fill="#1E1A19"/><path d="M-30 150 L120 60 L90 180 L250 40 L230 170 L340 110" fill="none" stroke="#1FAF6B" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 300 220" role="img" aria-label="Red route on Chalk"><rect width="300" height="220" fill="#F6F3F1"/><path d="M-20 40 L200 20 L60 120 L290 100 L120 240" fill="none" stroke="#EB4C44" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="dosdonts" style="margin-top:16px">
+    <div class="dd yes"><h4>✓ Do</h4><ul><li>Use one Route per layout, behind a headline or photo edge.</li><li>Scale the stroke so it’s roughly as thick as the wordmark’s letter strokes.</li><li>Animate it drawing on over 600–900 ms in motion work.</li></ul></div>
+    <div class="dd no"><h4>✕ Don’t</h4><ul><li>Run it behind body text or the logo.</li><li>Stack several Routes or cross it over itself.</li><li>Add gradients, outlines or drop shadows.</li></ul></div>
+  </div>
+
+  <h3 class="sub-h">Photo frames &amp; characters</h3>
+  <div class="el-row">
+    <div class="grid g2">
+      <div class="photo-frame" style="background:#C58B63"><svg viewBox="0 0 200 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="250" fill="#E9A15F"/><rect y="150" width="200" height="100" fill="#8A5A3C"/><circle cx="150" cy="70" r="26" fill="#FFD774"/><rect x="18" y="110" width="120" height="70" rx="14" fill="#F6F3F1"/><rect x="28" y="120" width="44" height="26" rx="4" fill="#5B4A44"/></svg><span class="hash">#BeWOW</span></div>
+      <div class="photo-frame" style="background:var(--wow-blue);aspect-ratio:4/5"><svg viewBox="0 0 200 250" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="200" height="250" fill="#7FB3E8"/><circle cx="100" cy="120" r="40" fill="#6B4A3A"/><rect x="50" y="160" width="100" height="100" rx="40" fill="#F6F3F1"/></svg><span class="hash" style="background:var(--wow-tar)">#Siyabangena</span></div>
+    </div>
+    <ul class="rules" style="align-content:center">
+      <li>Photos sit in 24 px rounded frames on screen, or 6 mm in print. Never use circles or hard corners.</li>
+      <li>The hashtag Tab docks into the bottom-left corner, flush with the frame.</li>
+      <li><b>Character concepts</b> (the waving round “O” figures from the 2025 guide) are still in development. Use only approved master artwork, always in single-colour Red line style, and never alongside real people in the same frame.</li>
+      <li class="muted">The illustrations here are placeholders. Use real photography, following chapter 06.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 PHOTO -->
+<section class="chapter" id="photo">
+  <div class="ch-head">
+    <div><span class="ch-num">06 — PHOTOGRAPHY</span><h2>Real ranks. Real people.</h2></div>
+    <p>Our photography shows the industry as it really is: proud, busy, sunlit and South African. People come first and vehicles second. The 2025 guide’s stock images of international teenagers don’t represent WOW and should be retired.</p>
+  </div>
+  <div class="shots">
+    <div class="shot bg-ox"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#5A1A1C" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The owner at golden hour</b><span>Driver or owner beside their Quantum, phone in hand, warm low sun. Shot from a confident low angle.</span></div></div>
+    <div class="shot bg-yellow"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#F5B400" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Fuel at the forecourt</b><span>A WOW tag at the pump in Komani. Show the attendant and the driver together.</span></div></div>
+    <div class="shot bg-green"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#199A5D" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Paying without cash</b><span>A commuter taps, scans a QR code or dials USSD on a basic phone. Show the hands and a smile, not a screen close-up.</span></div></div>
+    <div class="shot bg-blue"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#2A4FCC" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The agent at the rank</b><span>A WOW Agent in branded kit, signing up a driver or selling a SIM. Show a real conversation.</span></div></div>
+    <div class="shot bg-pink"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#E04689" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Scholars boarding</b><span>Learners boarding in uniform with a palm scan at the door. Faces only with signed parental consent.</span></div></div>
+    <div class="shot bg-tar"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 60 L220 20 L120 160 L420 90" fill="none" stroke="#2E2826" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The spaza owner</b><span>A merchant behind the counter with a WOW card machine, stock on the shelves and a customer paying.</span></div></div>
+  </div>
+  <div class="dosdonts" style="margin-top:16px">
+    <div class="dd yes"><h4>✓ Do</h4><ul><li>Shoot on location in the Eastern Cape: Gqeberha, Mthatha, Komani, East London.</li><li>Use natural daylight, rich warm tones and a real sense of movement.</li><li>Get signed model releases for everyone, and parental consent for all minors.</li><li>Leave clear space on one side for a headline and a Tab.</li></ul></div>
+    <div class="dd no"><h4>✕ Don’t</h4><ul><li>Use generic or overseas stock, or AI-generated people.</li><li>Show crowding, conflict, cash in hand or damaged vehicles.</li><li>Use heavy filters, black-and-white or duotones other than Red.</li><li>Show readable number plates or real commuters’ phone screens.</li></ul></div>
+  </div>
+</section>
+
+<!-- 07 VOICE -->
+<section class="chapter" id="voice">
+  <div class="ch-head">
+    <div><span class="ch-num">07 — VOICE &amp; TONE</span><h2>Arrive with intent</h2></div>
+    <p>WOW speaks like a proud owner addressing their own people: direct, warm, confident and never corporate. We write for someone reading on a basic phone at a busy rank.</p>
+  </div>
+
+  <div class="voice">
+    <div class="vrow"><div><h3>Speak as the owner</h3><p>The industry built this. Say “your co-op” and “we”, never “the beneficiaries”.</p></div>
+      <div class="say y"><span class="eyebrow">✓ Say</span><q>Your co-op. Your rules. Every rebate flows back to you.</q></div>
+      <div class="say n"><span class="eyebrow">✕ Not</span><q>This initiative empowers informal-sector stakeholders to access benefits.</q></div></div>
+    <div class="vrow"><div><h3>Say it at rank level</h3><p>Use short sentences and everyday words. If a driver can’t repeat it to a passenger, rewrite it.</p></div>
+      <div class="say y"><span class="eyebrow">✓ Say</span><q>Data that doesn’t expire. Buy what you need, when you can.</q></div>
+      <div class="say n"><span class="eyebrow">✕ Not</span><q>Leverage our non-expiring MVNO data bundles for optimised connectivity.</q></div></div>
+    <div class="vrow"><div><h3>Confident, not hype</h3><p>Our proof is scale, ownership and real partners. State facts plainly and let the numbers do the shouting.</p></div>
+      <div class="say y"><span class="eyebrow">✓ Say</span><q>67 000 operators. One fleet. The fuel you already buy now pays you back.</q></div>
+      <div class="say n"><span class="eyebrow">✕ Not</span><q>The most revolutionary, game-changing fintech disruption Africa has ever seen!!!</q></div></div>
+    <div class="vrow"><div><h3>Proudly local</h3><p>Use South African English, name places the way locals do, and use isiXhosa and isiZulu where it comes naturally. Always add a translation nearby for mixed audiences.</p></div>
+      <div class="say y"><span class="eyebrow">✓ Say</span><q>Launching in Komani first, then province-wide. Siyabangena!</q></div>
+      <div class="say n"><span class="eyebrow">✕ Not</span><q>Rolling out to select Tier-2 markets in Q3.</q></div></div>
+  </div>
+
+  <h3 class="sub-h">Approved lines</h3>
+  <p class="sub-lede">Use these lines exactly as written. New taglines need brand approval.</p>
+  <div class="lines">
+    <span>Siyabangena!</span><span>Be WOW!</span><span>Your co-op. Your rules.</span><span>The industry owns the road ahead.</span><span>Fuel. Ride. Pay. Earn. Build.</span><span>From rank to revenue.</span><span>Crafted and owned by the public transport industry.</span>
+  </div>
+
+  <h3 class="sub-h">Writing style</h3>
+  <p class="sub-lede">Follow South African conventions everywhere. The mock-up website mixes several styles, so use this table to fix them.</p>
+  <div class="tbl-wrap"><table class="style-tbl">
+    <thead><tr><th>Topic</th><th>Write</th><th>Not</th></tr></thead>
+    <tbody>
+      <tr><td>Brand name</td><td>WOW (text) · WOW! (logo only) · Wealth on Wheels</td><td>Wow, W.O.W., Wealth On Wheels</td></tr>
+      <tr><td>Products</td><td>WOW Fuel, WOW Mobile, WOW-Fi, WOW-Go, LuckyX by WOW</td><td>Wow-Fuel, WOW FI, Wowgo</td></tr>
+      <tr><td>Large numbers</td><td>67 000 · 10,7 million · 120 000+</td><td>67,000 · 10.7 million</td></tr>
+      <tr><td>Decimals</td><td>0,5 seconds · 87%</td><td>0.5s · 87 percent</td></tr>
+      <tr><td>Money</td><td>R25,50 · R1 trillion · R1,2 billion</td><td>ZAR 25.50 · R 25,50 · $</td></tr>
+      <tr><td>Dates</td><td>14 September 2026 · Sept 2026 (tight spaces)</td><td>09/14/2026 · Sept. 14th</td></tr>
+      <tr><td>Spelling</td><td>organised, colour, programme, co-operative</td><td>organized, color, program, coop</td></tr>
+      <tr><td>Places</td><td>Gqeberha, Komani, Eastern Cape</td><td>Port Elizabeth, Queenstown (except in brackets for clarity)</td></tr>
+      <tr><td>Words we use</td><td>operators, owners, commuters, the rank, the industry, co-op</td><td>informal sector players, unbanked masses, taxi bosses</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 08 WEB -->
+<section class="chapter" id="web">
+  <div class="ch-head">
+    <div><span class="ch-num">08 — WEB &amp; DIGITAL SYSTEM</span><h2>Build it the same way every time</h2></div>
+    <p>This is the design system for wow.forus.digital, the WOW Connect app and every digital template. Drop <code>wow-tokens.css</code> into the project, and use only these tokens. No stray HEX values, and no DM Sans or Poppins.</p>
+  </div>
+
+  <div class="code">
+    <button class="copybtn" id="copy-tokens" type="button">Copy tokens</button>
+<pre id="tokens-src"><span class="c">/* wow-tokens.css — v2.0 (excerpt; full file ships with this guide) */</span>
+<span class="c">/* Fonts */</span>
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=Figtree:ital,wght@0,400..800;1,400..800&amp;display=swap");
+
+:root {
+  <span class="p">--wow-red</span>: <span class="v">#EB4C44</span>;        <span class="c">/* logo, headlines, hero blocks */</span>
+  <span class="p">--wow-red-deep</span>: <span class="v">#C8352D</span>;   <span class="c">/* buttons, links, small red text */</span>
+  <span class="p">--wow-red-press</span>: <span class="v">#A92B24</span>;  <span class="c">/* hover / pressed */</span>
+  <span class="p">--wow-oxblood</span>: <span class="v">#3C0F11</span>;
+  <span class="p">--wow-tar</span>: <span class="v">#1E1A19</span>;
+  <span class="p">--wow-white</span>: <span class="v">#FFFFFF</span>;
+  <span class="p">--wow-chalk</span>: <span class="v">#F6F3F1</span>;
+  <span class="p">--wow-stone</span>: <span class="v">#E7E1DE</span>;
+  <span class="p">--wow-ash</span>: <span class="v">#6E6563</span>;
+  <span class="p">--wow-yellow</span>: <span class="v">#FFC72C</span>;     <span class="c">/* Fuel, Scholar — Tar text */</span>
+  <span class="p">--wow-blue</span>: <span class="v">#2F5BEA</span>;       <span class="c">/* Mobile, WOW-Fi, Connect — White text */</span>
+  <span class="p">--wow-green</span>: <span class="v">#1FAF6B</span>;      <span class="c">/* Wallet, Merchants — Tar text */</span>
+  <span class="p">--wow-pink</span>: <span class="v">#F2579B</span>;       <span class="c">/* LuckyX, WOW-Go — Tar text */</span>
+
+  <span class="p">--wow-font-display</span>: <span class="v">"Archivo", "Arial Black", Arial, sans-serif</span>;
+  <span class="p">--wow-font-text</span>: <span class="v">"Figtree", "Segoe UI", Arial, sans-serif</span>;
+  <span class="p">--wow-size-display</span>: <span class="v">clamp(3.25rem, 7vw + 1rem, 7.5rem)</span>;
+  <span class="p">--wow-size-h1</span>: <span class="v">clamp(2.5rem, 4vw + 1rem, 4.5rem)</span>;
+  <span class="p">--wow-size-h2</span>: <span class="v">clamp(2rem, 2.2vw + 1rem, 3rem)</span>;
+  <span class="p">--wow-size-body</span>: <span class="v">1.0625rem</span>;
+
+  <span class="p">--wow-space-1</span>: <span class="v">4px</span>;  <span class="p">--wow-space-2</span>: <span class="v">8px</span>;  <span class="p">--wow-space-3</span>: <span class="v">12px</span>;
+  <span class="p">--wow-space-4</span>: <span class="v">16px</span>; <span class="p">--wow-space-5</span>: <span class="v">24px</span>; <span class="p">--wow-space-6</span>: <span class="v">32px</span>;
+  <span class="p">--wow-space-7</span>: <span class="v">48px</span>; <span class="p">--wow-space-8</span>: <span class="v">64px</span>; <span class="p">--wow-space-9</span>: <span class="v">96px</span>;
+
+  <span class="p">--wow-radius-md</span>: <span class="v">16px</span>;  <span class="p">--wow-radius-lg</span>: <span class="v">24px</span>;
+  <span class="p">--wow-radius-pill</span>: <span class="v">999px</span>;             <span class="c">/* anything pressable */</span>
+  <span class="p">--wow-tab-sm</span>: <span class="v">16px 6px 16px 16px</span>;      <span class="c">/* 32px-high labels */</span>
+  <span class="p">--wow-tab-md</span>: <span class="v">28px 9px 28px 28px</span>;      <span class="c">/* 56px-high logo holders */</span>
+  <span class="p">--wow-container</span>: <span class="v">1240px</span>;
+  <span class="p">--wow-page-margin</span>: <span class="v">clamp(16px, 4vw, 48px)</span>;
+}</pre>
+  </div>
+
+  <div class="tokens-strip" style="margin-top:16px">
+    <div class="comp"><h4>Spacing — 4 px base</h4>
+      <div class="space-scale">
+        <div><span>space-1</span><span>4</span><i style="width:4px"></i></div>
+        <div><span>space-2</span><span>8</span><i style="width:8px"></i></div>
+        <div><span>space-3</span><span>12</span><i style="width:12px"></i></div>
+        <div><span>space-4</span><span>16</span><i style="width:16px"></i></div>
+        <div><span>space-5</span><span>24</span><i style="width:24px"></i></div>
+        <div><span>space-6</span><span>32</span><i style="width:32px"></i></div>
+        <div><span>space-7</span><span>48</span><i style="width:48px"></i></div>
+        <div><span>space-8</span><span>64</span><i style="width:64px"></i></div>
+        <div><span>space-9</span><span>96</span><i style="width:96px"></i></div>
+      </div>
+    </div>
+    <div class="comp"><h4>Radius &amp; grid</h4>
+      <div class="radii">
+        <div><i style="border-radius:8px"></i>8 · inputs</div>
+        <div><i style="border-radius:16px"></i>16 · small cards</div>
+        <div><i style="border-radius:24px"></i>24 · cards, photos</div>
+        <div><i style="border-radius:28px"></i>pill · buttons</div>
+        <div><i style="border-radius:28px 9px 28px 28px;background:var(--wow-red);border-color:var(--wow-red)"></i>tab · brand</div>
+      </div>
+      <p class="muted" style="font-size:15px">12-column grid · 1240 px max container · 24 px gutters · margins 16 px (mobile) to 48 px (desktop). Breakpoints: 640, 960 and 1280. Shadows are only for floating UI like menus and the sticky nav. Cards use Chalk, not shadows.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Core components</h3>
+  <div class="grid g2">
+    <div class="comp"><h4>Buttons</h4>
+      <div class="btnrow"><a class="btn btn-primary" href="#web">Get started</a><a class="btn btn-secondary" href="#web">Explore the platform</a></div>
+      <div class="btnrow" style="background:var(--wow-red);padding:18px;border-radius:16px"><a class="btn btn-onred" href="#web">Get involved</a><a class="btn btn-ghost-w" href="#web">Watch the video</a></div>
+      <div class="btnrow"><a class="btn btn-primary btn-sm" href="#web">Send message</a><a class="btn btn-secondary btn-sm" href="#web">Read article</a></div>
+      <p class="muted" style="font-size:14.5px">Button text is sentence case, Figtree Bold 16, 52 px high (40 px small). Labels are verbs that say exactly what happens. Use one primary button per view.</p>
+    </div>
+    <div class="comp"><h4>Form fields</h4>
+      <div class="field"><label for="f-name">Full name *</label><input id="f-name" value="Nomvula Dlamini"></div>
+      <div class="field"><label for="f-role">I am a… *</label><select id="f-role"><option>Taxi owner / fleet owner</option><option>Driver</option><option>Commuter</option><option>Association / co-op</option></select><small>We’ll connect you with the right WOW Agent.</small></div>
+      <p class="muted" style="font-size:14.5px">Labels sit above fields, in caps with 8% tracking. The focus ring is 3 px Red Deep with a 3 px white offset. Error text goes in Red Deep below the field and explains how to fix the problem.</p>
+    </div>
+  </div>
+
+  <div class="comp" style="margin-top:16px"><h4>Focus-area cards &amp; navigation</h4>
+    <nav class="navmock" aria-label="Example navigation"><img src="logos/WOW_Lockup-Siyabangena_Red.svg" alt="WOW! Siyabangena!"><ul><li>Why WOW</li><li>Platform</li><li>Scholar</li><li>Partners</li><li>News</li></ul><span class="btn btn-primary btn-sm">Get started</span></nav>
+    <div class="grid g4">
+      <div class="fa-card"><span class="n">01</span><span class="lbl bg-green">WALLET</span><h5>The digital unlocker</h5><p>Instant, free wallet-to-wallet transfers, backed 1:1 by real rands.</p></div>
+      <div class="fa-card"><span class="n">03</span><span class="lbl bg-yellow">FUEL</span><h5>The catalyst</h5><p>The industry negotiating as one fleet, with rebates at the pump.</p></div>
+      <div class="fa-card"><span class="n">04</span><span class="lbl bg-blue">MOBILE</span><h5>Own your customers</h5><p>SIMs sold at the rank. Data that doesn’t expire.</p></div>
+      <div class="fa-card"><span class="n">06</span><span class="lbl bg-pink">LUCKYX</span><h5>Earned, never bought</h5><p>Ride, top up and spend to enter. Explicitly not gambling.</p></div>
+    </div>
+    <p class="muted" style="font-size:14.5px">The focus-area numbers (01–10) are fixed in the platform order and are used on every channel. Each accent colour appears only in the card’s label, never as the card’s full background in a grid.</p>
+  </div>
+</section>
+
+<!-- 09 APPLICATIONS -->
+<section class="chapter" id="applications">
+  <div class="ch-head">
+    <div><span class="ch-num">09 — APPLICATIONS</span><h2>Putting it together</h2></div>
+    <p>Reference layouts for the most common formats. Build templates in Canva or Figma from these, using the same tokens and master logo files.</p>
+  </div>
+
+  <div class="apps">
+    <figure class="app">
+      <div class="post bg-red"><div class="post-in">
+        <span class="pl"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"></span>
+        <span class="ey">WOW FUEL · KOMANI</span>
+        <h4>The fuel you already buy now pays you back.</h4>
+        <div class="cta"><span class="pill">Launching Sept 2026</span><img class="mk" src="logos/WOW_Mark_White.svg" alt=""></div>
+      </div></div>
+      <figcaption><b>Social feed post</b>1080 × 1350 · Red ground · logo in a white Tab, top-left</figcaption>
+    </figure>
+    <figure class="app">
+      <div class="post story bg-tar"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"><path d="M-10 30 L60 12 L20 58 L100 44" fill="none" stroke="#FFC72C" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="post-in">
+        <span class="pl" style="margin-top:30cqw"><img src="logos/WOW_Wordmark_Red.svg" alt="WOW!"></span>
+        <div class="big">120 000+</div>
+        <p>scholars ride with the industry every school day, now with palm-scan boarding.</p>
+        <div class="sf"><img src="logos/WOW_Siyabangena-Badge_Red.svg" alt="Siyabangena!"></div>
+      </div></div>
+      <figcaption><b>Story / Status</b>1080 × 1920 · keep the top 250 px and bottom 340 px clear of text</figcaption>
+    </figure>
+    <figure class="app" style="grid-column:auto">
+      <div class="webhero">
+        <div class="bar"><i></i><i></i><i></i><img src="logos/WOW_Lockup-Siyabangena_Red.svg" alt=""><span>Get started</span></div>
+        <div class="wh">
+          <div><span class="ey">WEALTH ON WHEELS</span><h4>Crafted and <span class="red">owned</span> by the public transport industry.</h4><p>South Africa’s largest collectively owned public transport structure, running on next-generation technology.</p>
+            <div class="b"><span style="background:var(--wow-red-deep);color:#fff">Explore the platform</span><span style="box-shadow:inset 0 0 0 .3cqw var(--wow-tar)">Why WOW</span></div></div>
+          <div class="ph"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-20 50 L130 20 L40 120 L220 80 L120 230" fill="none" stroke="#EB4C44" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="stats2"><div><b>~67 000</b><small>Operators</small></div><div><b>~105 000</b><small>Minibus taxis</small></div><div><b>186 / 45</b><small>Co-operatives</small></div><div><b>~1/3</b><small>National fleet</small></div></div>
+        </div>
+      </div>
+      <figcaption><b>Website hero</b>Sentence-case headline with one red word, a Red Deep primary button, and a stat bar in tabular numbers. Real photography goes where the Route placeholder is.</figcaption>
+    </figure>
+  </div>
+
+  <h3 class="sub-h">Standard sizes</h3>
+  <div class="tbl-wrap"><table class="sizes">
+    <thead><tr><th>Format</th><th>Size</th><th>Logo</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Instagram / Facebook feed</td><td>1080 × 1350</td><td>Wordmark in Tab, top-left</td><td>Headline of eight words or fewer. Handle #BeWOW in the caption.</td></tr>
+      <tr><td>Stories, Reels, WhatsApp Status</td><td>1080 × 1920</td><td>Wordmark in Tab</td><td>End frame: primary lockup on Red for 1,5 s.</td></tr>
+      <tr><td>LinkedIn / X post</td><td>1200 × 627</td><td>Primary lockup</td><td>Oxblood ground for investor and partner news.</td></tr>
+      <tr><td>Website hero image</td><td>2400 × 1600</td><td>—</td><td>Subject on the right third. Export WebP at under 300 KB.</td></tr>
+      <tr><td>Rank poster</td><td>A2 · 420 × 594 mm</td><td>Primary lockup ≥ 120 mm</td><td>All-caps headline allowed. Add a QR code and USSD code.</td></tr>
+      <tr><td>Taxi rear window</td><td>Per vehicle template</td><td>White wordmark</td><td>One-way vision film. No small text.</td></tr>
+      <tr><td>App icon</td><td>1024 × 1024</td><td>W! mark, White on Red</td><td>Mark is 70% of icon width, optically centred.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 10 ASSETS -->
+<section class="chapter" id="assets">
+  <div class="ch-head">
+    <div><span class="ch-num">10 — ASSETS</span><h2>Master files</h2></div>
+    <p>Every logo is supplied in Red, White and Tar, as SVG vectors and transparent PNGs, in the <code>logos/</code> folder next to this guide. Use SVG for web and anything that scales, and PNG for Office, Canva and email. Name new files as <code>WOW_[Asset]_[Colour].[ext]</code>.</p>
+  </div>
+  <div class="files">
+    <div class="file"><div class="plate bg-white"><img src="logos/WOW_Lockup-Siyabangena_Red.svg" alt=""></div><p>WOW_Lockup-Siyabangena_<br>Red · White · Tar .png</p></div>
+    <div class="file"><div class="plate bg-red"><img src="logos/WOW_Wordmark_White.svg" alt=""></div><p>WOW_Wordmark_<br>Red · White · Tar .png</p></div>
+    <div class="file"><div class="plate bg-tar"><img src="logos/WOW_Mark_White.svg" alt=""></div><p>WOW_Mark_<br>Red · White · Tar .png</p></div>
+    <div class="file"><div class="plate bg-chalk"><img src="logos/WOW_Siyabangena-Badge_Tar.svg" alt=""></div><p>WOW_Siyabangena-Badge_<br>Red · White · Tar .png</p></div>
+  </div>
+  <p class="note"><b>About the SVGs:</b> they were traced from the 2025 artwork and match the original shapes to within about 1–4%. They’re fine for web, social and signage. For print production, still get the designer’s original vector files (AI/PDF in CMYK) and a Pantone match for WOW Red, checked on a press proof. PMS 7417 C is the closest starting point.</p>
+</section>
+
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="logos/WOW_Lockup-Siyabangena_White.svg" alt="WOW! Siyabangena!">
+    <p>WOW — Wealth on Wheels · ECTTC Tertiary Co-operative.<br>Brand Guidelines v2.0, September 2026. For questions or approvals, contact the WOW brand team.</p>
+  </div>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  function rgb(hex){var h=hex.replace('#','');return [0,2,4].map(function(i){return parseInt(h.substr(i,2),16)})}
+  function cmyk(r,g,b){var R=r/255,G=g/255,B=b/255,k=1-Math.max(R,G,B);if(k===1)return[0,0,0,100];return[(1-R-k)/(1-k),(1-G-k)/(1-k),(1-B-k)/(1-k),k].map(function(v){return Math.round(v*100)})}
+  document.querySelectorAll('.sw').forEach(function(el){
+    var hex=el.dataset.hex,c=rgb(hex),m=el.dataset.cmyk?el.dataset.cmyk.split(' '):cmyk(c[0],c[1],c[2]);
+    el.querySelector('.vals').innerHTML='<span><b>HEX</b> '+hex+'</span><span><b>RGB</b> '+c.join(' ')+'</span><span><b>CMYK</b> '+m.join(' ')+'</span>';
+    el.setAttribute('aria-label',el.querySelector('h3').textContent+', '+hex+'. Copy HEX');
+    el.addEventListener('click',function(){copy(hex,function(){el.classList.add('done');setTimeout(function(){el.classList.remove('done')},1400)})});
+  });
+  function copy(text,cb){
+    try{navigator.clipboard.writeText(text).then(cb,fallback)}catch(e){fallback()}
+    function fallback(){try{var t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();cb()}catch(e){}}
+  }
+  var btn=document.getElementById('copy-tokens');
+  btn.addEventListener('click',function(){copy(document.getElementById('tokens-src').innerText,function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy tokens'},1600)})});
+  var links=[].slice.call(document.querySelectorAll('.rail a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})}})},{rootMargin:'-35% 0px -60% 0px'});
+    document.querySelectorAll('.chapter').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
